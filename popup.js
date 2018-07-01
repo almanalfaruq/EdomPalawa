@@ -1,10 +1,22 @@
 $(document).ready(function() {
+    function checkRadio(text) {
+        let radios = document.querySelectorAll('input[type="radio"]');
+        [].forEach.call(radios, function(radio) {
+            console.log(radio.value);
+            if (radio.value == text) {
+                radio.click();
+            }
+        });
+    }
+
     function isiEdom(text) {
-        alert($('label.radio-inline').last().text());
-        $('label.radio-inline').each(function() {
-           if (($this).text() == text) {
-               $(this).click();
-           }
+        chrome.tabs.query({active: true, currentWindow: true}, function(tabs) {
+            chrome.tabs.executeScript(
+                tabs[0].id,
+                {
+                    code: '(' + checkRadio + ')("' + text + '");'
+                }
+            );
         });
     }
 
@@ -12,26 +24,19 @@ $(document).ready(function() {
         let isi = $('#isi-edom').find(':selected').val();
         switch (isi) {
             case '1':
-                isiEdom('Kurang');
+                isiEdom('QkxWRVo5TzI4cWl6VjByZXJXSXBLUT09');
                 break;
             case '2':
-                isiEdom('Cukup');
+                isiEdom('WHFoVmtEb0VtdVhRZ2NQaHczdzFRdz09');
                 break;
             case '3':
-                isiEdom('Baik');
+                isiEdom('aGJFd1pYc3JaQzNxVndWWnZXMFlHdz09');
                 break;
             case '4':
-                isiEdom('Sangat Baik');
+                isiEdom('YUd3ME1zK2JXdmc1djFXRFUrQmU3Zz09');
                 break;
             default:
                 break;
         }
     });
 });
-// document.addEventListener('DOMContentLoaded', function() {
-//     let link = document.getElementById('btn-isi');
-//     // onClick's logic below:
-//     link.addEventListener('click', function() {
-//         alert('halo');
-//     });
-// });
