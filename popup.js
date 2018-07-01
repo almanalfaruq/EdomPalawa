@@ -1,10 +1,10 @@
 $(document).ready(function() {
     function checkRadio(text) {
-        let radios = document.querySelectorAll('input[type="radio"]');
-        [].forEach.call(radios, function(radio) {
-            console.log(radio.value);
-            if (radio.value == text) {
-                radio.click();
+        let labels = document.querySelectorAll('label.radio-inline');
+        [].forEach.call(labels, function(label) {
+            let value = label.innerHTML.split(' ')[5].replace(/\s/g, "");;
+            if (value == text) {
+                label.click();
             }
         });
     }
@@ -24,16 +24,16 @@ $(document).ready(function() {
         let isi = $('#isi-edom').find(':selected').val();
         switch (isi) {
             case '1':
-                isiEdom('QkxWRVo5TzI4cWl6VjByZXJXSXBLUT09');
+                isiEdom('Kurang');
                 break;
             case '2':
-                isiEdom('WHFoVmtEb0VtdVhRZ2NQaHczdzFRdz09');
+                isiEdom('Cukup');
                 break;
             case '3':
-                isiEdom('aGJFd1pYc3JaQzNxVndWWnZXMFlHdz09');
+                isiEdom('Baik');
                 break;
             case '4':
-                isiEdom('YUd3ME1zK2JXdmc1djFXRFUrQmU3Zz09');
+                isiEdom('Sangat');
                 break;
             default:
                 break;
