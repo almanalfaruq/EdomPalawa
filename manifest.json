@@ -1,7 +1,7 @@
 {
     "manifest_version": 2,
     "name": "EdomPalawa",
-    "version": "1.1",
+    "version": "1.2",
     "browser_action": {
       "default_popup": "popup.html",
       "default_icon": {

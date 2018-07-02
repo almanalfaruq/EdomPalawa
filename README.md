@@ -2,6 +2,9 @@
 
 Sebuah Chrome Desktop Extension bagi orang-orang yang malas dan tidak subjektif dalam mengisi EDOM Palawa
 
+## Changelog
+Bisa dilihat [di sini](https://github.com/almanalfaruq/EdomPalawa/blob/master/CHANGELOG.md)
+
 ## Cara penggunaan
 1. Hanya bisa untuk Chrome Browser Desktop, jadi sebelumnya buka dulu Chrome-nya
 2. Download melalui [link](https://github.com/almanalfaruq/EdomPalawa/archive/master.zip)
