@@ -2,15 +2,26 @@
 <html lang="en">
 <head>
     <script src="popup.js"></script>
+    <style>
+        .main {
+            min-width: 200px;
+        }
+        #btn-isi {
+            float: right;
+        }
+    </style>
 </head>
 <body>
-    <label for="isi-edom">Nilai EDOM</label><br>
-    <select name="isi-edom" id="isi-edom">
-        <option value="1">Kurang/Buruk</option>
-        <option value="2">Cukup</option>
-        <option value="3">Baik</option>
-        <option value="4">Sangat Baik</option>
-    </select><br><br>
-    <button id="btn-isi">Isi EDOM</button>
+    <div class="main">
+        <label for="isi-edom">Nilai EDOM</label><br>
+        <select name="isi-edom" id="isi-edom">
+            <option value="1">Kurang/Buruk</option>
+            <option value="2">Cukup</option>
+            <option value="3">Baik</option>
+            <option value="4">Sangat Baik</option>
+            <option value="5">Random</option>
+        </select><br>
+        <button id="btn-isi">Isi EDOM</button><br>
+    </div>
 </body>
 </html>
