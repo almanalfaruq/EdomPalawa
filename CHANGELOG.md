@@ -1,4 +1,7 @@
 # Changelog
+## Version 1.3
+* Menambah pilihan random (belum dicoba)
+  
 ## Version 1.2
 * Mengganti semua jQuery menjadi Vanilla JS (lebih ringan)
 
