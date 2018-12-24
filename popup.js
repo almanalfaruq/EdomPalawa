@@ -1,18 +1,17 @@
-document.addEventListener("DOMContentLoaded", function() {
-    // Text randomizer
-    function randomizeText() {
-        let randomInt = Math.floor(Math.random() * 4);
-        if (randomInt == 0) {
-            return 'Kurang';
-        } else if (randomInt == 1) {
-            return 'Cukup';
-        } else if (randomInt == 2) {
-            return 'Baik';
-        } else if (randomInt == 3) {
-            return 'Sangat';
-        }
+const randomizeText = () => {
+    let randomInt = Math.floor(Math.random() * 4);
+    if (randomInt == 0) {
+        return 'Kurang';
+    } else if (randomInt == 1) {
+        return 'Cukup';
+    } else if (randomInt == 2) {
+        return 'Baik';
+    } else {
+        return 'Sangat';
     }
+}
 
+document.addEventListener("DOMContentLoaded", function() {
     // Function that run inside the currently active tab
     function checkRadio(text) {
         let tempText = text;
@@ -20,7 +19,9 @@ document.addEventListener("DOMContentLoaded", function() {
         [].forEach.call(labels, function(label, index) {
             // Get only first word from the radio button label
             let value = label.innerHTML.split(' ')[5].replace(/\s/g, "");;
-            if (text == 'Random') tempText = randomizeText();
+            if (text == 'Random') {
+                tempText = randomizeText();
+            }
             if (value == tempText) {
                 label.click();
             } else if (tempText == 'Kurang' && value == 'Buruk') { // Handle 'Buruk' option if there was no 'Kurang' option
@@ -29,8 +30,16 @@ document.addEventListener("DOMContentLoaded", function() {
         });
     }
 
-    function isiEdom(text) {
+    const isiEdom = (text) => {
         // Call chrome extension helper
+        chrome.tabs.query({active: true, currentWindow: true}, function(tabs) {
+            chrome.tabs.executeScript(
+                tabs[0].id,
+                {
+                    file: 'popup.js'
+                }
+            );
+        });
         chrome.tabs.query({active: true, currentWindow: true}, function(tabs) {
             chrome.tabs.executeScript(
                 tabs[0].id,
