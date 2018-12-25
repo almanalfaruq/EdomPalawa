@@ -6,6 +6,10 @@ Sebuah Chrome Desktop Extension bagi orang-orang yang malas dan tidak subjektif 
 Bisa dilihat [di sini](https://github.com/almanalfaruq/EdomPalawa/blob/master/CHANGELOG.md)
 
 ## Cara penggunaan
+### Install melalui Chrome Store
+[Add to Chrome](https://chrome.google.com/webstore/detail/edompalawa/lgjcepmbljaofgfeklcmlihlfipnnide)
+
+### Install Manual
 1. Hanya bisa untuk Chrome Browser Desktop, jadi sebelumnya buka dulu Chrome-nya
 2. Download melalui [link](https://github.com/almanalfaruq/EdomPalawa/archive/master.zip)
 3. *(Optional)* Extract hasil download, lalu ganti nama folder hasil download menjadi *EdomPalawa* (hilangkan kata "-master")
