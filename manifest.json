@@ -12,6 +12,6 @@
       }
     },
     "permissions": [
-      "tabs", "activeTab", "<all_urls>"
+      "tabs", "activeTab", "https://palawa.ugm.ac.id/*"
     ]
   }
