@@ -1,6 +1,6 @@
 # EdomPalawa
 
-Sebuah Chrome Desktop Extension bagi orang-orang yang malas dan tidak subjektif dalam mengisi EDOM Palawa
+Sebuah Chrome Desktop Extension bagi orang-orang yang malas dan subjektif dalam mengisi EDOM Palawa
 
 ## Changelog
 Bisa dilihat [di sini](https://github.com/almanalfaruq/EdomPalawa/blob/master/CHANGELOG.md)
@@ -23,3 +23,6 @@ Bisa dilihat [di sini](https://github.com/almanalfaruq/EdomPalawa/blob/master/CH
 ## Kontak
 * Line: almanalfaruq
 * Twitter: @almanalfaruq
+
+## Contributors
+* Ma'ruf Shidiq
