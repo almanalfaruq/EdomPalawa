@@ -1,17 +1,13 @@
-const randomizeText = () => {
-    let randomInt = Math.floor(Math.random() * 4);
-    if (randomInt == 0) {
-        return 'Kurang';
-    } else if (randomInt == 1) {
-        return 'Cukup';
-    } else if (randomInt == 2) {
-        return 'Baik';
-    } else {
-        return 'Sangat';
-    }
-}
-
 document.addEventListener("DOMContentLoaded", function() {
+    chrome.tabs.query({active: true, currentWindow: true}, function(tabs) {
+        chrome.tabs.executeScript(
+            tabs[0].id,
+            {
+                file: 'randomize.js'
+            }
+        );
+    });
+
     // Function that run inside the currently active tab
     function checkRadio(text) {
         let tempText = text;
@@ -32,14 +28,6 @@ document.addEventListener("DOMContentLoaded", function() {
 
     const isiEdom = (text) => {
         // Call chrome extension helper
-        chrome.tabs.query({active: true, currentWindow: true}, function(tabs) {
-            chrome.tabs.executeScript(
-                tabs[0].id,
-                {
-                    file: 'popup.js'
-                }
-            );
-        });
         chrome.tabs.query({active: true, currentWindow: true}, function(tabs) {
             chrome.tabs.executeScript(
                 tabs[0].id,
